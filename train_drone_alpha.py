@@ -1,7 +1,6 @@
 # USAGE
-# python train.py --dataset dataset --model pokedex.model --labelbin lb.pickle
+# python train_drone_alpha.py --dataset [datasetDir] --model [modelName].model --labelbin [labelName].pickle
 
-# set the matplotlib backend so figures can be saved in the background
 import matplotlib
 matplotlib.use("Agg")
 
