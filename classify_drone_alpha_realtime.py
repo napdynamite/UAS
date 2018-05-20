@@ -1,5 +1,5 @@
 # USAGE
-# python test_network.py --model santa_not_santa.model --image images/examples/santa_01.png
+# python classify_drone_alpha_realtime.py --model [trainedModelName].model
 
 # import the necessary packages
 from keras.preprocessing.image import img_to_array
