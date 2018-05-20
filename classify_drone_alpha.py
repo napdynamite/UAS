@@ -1,5 +1,5 @@
 # USAGE
-# python test_network.py --model santa_not_santa.model --image images/examples/santa_01.png
+# python classify_drone_alpha.py --model [modelName].model --image [unseen image dir]
 
 # import the necessary packages
 from keras.preprocessing.image import img_to_array
@@ -18,7 +18,7 @@ import cv2
 # args = vars(ap.parse_args())
 
 # load the image
-image = cv2.imread("B.jpg")
+image = cv2.imread(args["image"])
 
 # pre-process the image for classification
 image = cv2.resize(image, (32, 32))
@@ -28,7 +28,7 @@ image = np.expand_dims(image, axis=0)
 
 # load the trained convolutional neural network
 print("[INFO] loading network...")
-model = load_model("alpha.model")
+model = load_model(args["model"])
 
 # classify the input image
 (No_Target, Target) = model.predict(image)[0]
